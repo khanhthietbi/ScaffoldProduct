@@ -1,0 +1,315 @@
+﻿body
+{
+	font-family: Times New Roman Tahoma Verdana;
+	font-size: 12px;
+	color: Black;
+	margin: 0;
+	padding: 0;
+}
+
+img
+{
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+img, div
+{
+	behavior: url(iepngfix.htc);
+}
+#dau_trang
+{
+	width: 100%;
+	height: 101px;
+	background: url(images/head_bg.png) repeat-x;
+}
+.lbl_quantritrang
+{
+	float: left;
+	font-size: 18px;
+	color: #ffffff;
+	margin-left: 10px;
+}
+.lbl_phattrienboi
+{
+	float: right;
+	color: #ffffff;
+	margin-right: 10px;
+	margin-top: 3px;
+}
+.lbl_phattrienboi a
+{
+	color: #ffffff;
+	font-weight: bold;
+	text-decoration: none;
+	cursor: pointer;
+}
+.lbl_homnayngay
+{
+	clear: both;
+	margin-top: 5px;
+	margin-left: 10px;
+	height: 20px;
+	width: 100%;
+}
+.lbl_homnayngay span
+{
+	margin-right: 50px;
+}
+
+.lbl_dangxuat
+{
+	float: right;
+	margin-right: 20px;
+}
+
+.lbl_dangxuat a
+{
+	color: Blue;
+	font-weight: bold;
+	text-decoration: underline;
+	cursor: pointer;
+}
+.shortcut
+{
+	height: 60px;
+	width: 100%;
+	vertical-align: middle;
+}
+.shortcut ul
+{
+	list-style: none;
+	margin: 0;
+	margin-left: 10px;
+	padding: 0;
+}
+.shortcut li
+{
+	display: inline;
+	height: 60px;
+	vertical-align: middle;
+	margin-right: 20px;
+}
+
+.shortcut li:hover
+{
+	cursor: pointer;
+	background: url(images/icon_bongxanh.png) no-repeat;
+}
+
+.shortcut li a
+{
+	color: #000000;
+	font-size: 18px;
+	text-decoration: none;
+	cursor: pointer;
+	margin: 0;
+	display: block;
+	height: 60px;
+	vertical-align: middle;
+	float: left;
+}
+.shortcut li p
+{
+	float: left;
+	margin-top: 15px;
+	margin-left: 5px;
+}
+#giua_trang
+{
+	width: 100%;
+	background: #ffffff url(images/giuatrang_bg.png) repeat-y;
+}
+#cot_trai
+{
+	width: 200px;
+	float: left;
+}
+
+.leftbox
+{
+	width: 180px;
+	margin: 10px;
+}
+
+.leftbox_header
+{
+	width: 100%;
+	height: 35px;
+	background: url(images/left_box_header.png) no-repeat top left;
+}
+
+.leftbox_content
+{
+	width: 100%;
+	padding: 10px;
+	background: url(images/left_box_content.png) repeat-y top left;
+}
+
+.leftbox_footer
+{
+	width: 100%;
+	height: 5px;
+	background: url(images/left_box_footer.png) no-repeat top left;
+}
+
+.leftbox_header h3
+{
+	font-size: 18px;
+	color: #6666cc;
+	font-weight: normal;
+	margin-left: 10px;
+	padding-top: 5px;
+}
+
+.leftbox_header img
+{
+	float: right;
+	margin-right: 10px;
+	margin-top: 5px;
+}
+
+ul, ol
+{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.leftbox_content ul
+{
+	list-style-image: url(images/icon_daucong.png);
+	margin-left: 15px;
+}
+
+.leftbox_content li
+{
+	margin-bottom: 5px;
+}
+
+.leftbox_content li a
+{
+	font-size: 14px;
+	color: #6666cc;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.leftbox_content li a:hover
+{
+	text-decoration: underline;
+}
+
+.leftbox_content li a.active
+{
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+#cot_phai
+{
+	margin-left: 200px;
+	padding: 10px;
+}
+
+td.tieu_de_canh_phai
+{
+	text-align: right;
+	font-weight: bold;
+}
+
+#tbl_DS_NLSP
+{
+	border-collapse: collapse;
+	width: 700px;
+}
+#tbl_DS_NLSP th
+{
+	border: solid 1px #cccccc;
+	background-color: #ccccee;
+	height: 30px;
+}
+
+#tbl_DS_NLSP td
+{
+	border: solid 1px #cccccc;
+	padding: 2px;
+}
+
+td.td_so
+{
+	text-align: center;
+}
+
+td.td_chu
+{
+	text-align: left;
+}
+
+td.td_lenh
+{
+	text-align: center;
+}
+
+td.td_lenh span
+{
+	color: Blue;
+	cursor: pointer;
+}
+
+#tbl_DS_LSP
+{
+	border-collapse: collapse;
+	width: 700px;
+	margin: 0 auto;
+}
+
+#tbl_DS_LSP th
+{
+	border: solid 1px #cccccc;
+	background-color: #ccccee;
+	height: 30px;
+}
+
+#tbl_DS_LSP td
+{
+	border: solid 1px #cccccc;
+	padding: 2px;
+}
+
+#tbl_DS_SP
+{
+	border-collapse: collapse;
+	width: 900px;
+	margin: 0 auto;
+}
+
+#tbl_DS_SP th
+{
+	border: solid 1px #cccccc;
+	background-color: #ccccee;
+	height: 30px;
+}
+
+#tbl_DS_SP td
+{
+	border: solid 1px #cccccc;
+	padding: 2px;
+}
+
+#tblDatHang
+{
+	width: 590px;
+	margin: 0 auto;
+	border-collapse: collapse;
+}
+
+#tblDatHang td
+{
+	border: solid 1px #000000;
+}
+#tblDatHang th
+{
+	border: solid 1px #000000;
+}

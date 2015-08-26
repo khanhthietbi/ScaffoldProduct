@@ -1,0 +1,247 @@
+﻿<%@ master language="C#" autoeventwireup="true" inherits="front_end, App_Web_uponfelt" %>
+
+<%@ Register Src="~/usercontrols/TyGia.ascx" TagName="TyGia" TagPrefix="adsoftware" %>
+<%@ Register Src="~/usercontrols/ThongTinThoiTiet.ascx" TagName="ThoiTiet" TagPrefix="adsoftware" %>
+<%@ Register Src="~/usercontrols/NhomVaLoaiSanPham.ascx" TagName="NhomVaLoaiSanPham"
+    TagPrefix="adsoftware" %>
+<%@ Register Src="~/usercontrols/TinTuc.ascx" TagName="TinTuc" TagPrefix="adsoftware" %>
+<%@ Register Src="~/usercontrols/HoTroTrucTuyen.ascx" TagName="HoTroTrucTuyen" TagPrefix="adsoftware" %>
+<%@ Register Src="~/usercontrols/DoiTac.ascx" TagName="DoiTac" TagPrefix="adsoftware" %>
+<%@ Register Src="~/usercontrols/SanPhamNoiBat.ascx" TagName="SanPhamNoiBat" TagPrefix="adsoftware" %>
+<%@ Register Src="~/usercontrols/CuoiTrang.ascx" TagName="CuoiTrang" TagPrefix="adsoftware" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Untitled Page</title>
+    <meta name="google-site-verification" content="IlvCEq4tcjQDiIVUIz6la1c5KFBvfHUlT0LkIqEGnGY" />
+    <meta name="google-site-verification" content="e57olYpgV_W5DDLSjgYwKqiqZ8NI1QPFZnnMQSz_V4Q" />
+
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-24714513-4']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+
+    <meta name="keywords" content="Giáo Huy Hoàng, giao huy hoang, Giáo xây dựng, giao xay dung, cốp pha thép, cop pha thep, tranh đá quý, tranh da quy, Giáo xây dựng hải phòng, giao xay dung hai phong, cốp pha thép hải phòng, cop pha thep hai phong, tranh đá quý hải phòng, tranh da quy hai phong" />
+
+    <script src="js/jquery-1.5.1.min.js" type="text/javascript"></script>
+
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="icon" type="image/gif" href="animated_favicon1.gif">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="tieude">
+        <asp:ContentPlaceHolder ID="top_nav" runat="server">
+        </asp:ContentPlaceHolder>
+        <div id="banner">
+            <object style="position: absolute; left: 0px; top: 0px;" id="flash-overlay" type="application/x-shockwave-flash"
+                data="images/banner.swf" width="1000" height="162">
+                <param name="movie" value="images/banner.swf" />
+                <param name="quality" value="high" />
+                <param name="wmode" value="transparent" />
+                <param name="swfversion" value="6.0.65.0" />
+            </object>
+        </div>
+    </div>
+    <div id="noidung">
+        <div id="cotphai">
+            <div class="smallbox">
+                <div class="smallbox_dau">
+                    <span>HỖ TRỢ TRỰC TUYẾN</span></div>
+                <div class="smallbox_than">
+                    <div style="width: 216px; padding: 1px;">
+                        <adsoftware:HoTroTrucTuyen ID="HoTroTrucTuyen" runat="server" />
+                    </div>
+                </div>
+                <div class="smallbox_chan">
+                </div>
+            </div>
+            <div style="margin-bottom: 5px;">
+                <a href='baogia/<%# CauHinhHeThong_BLL.LayRaTheoKhoa("baogia").GiaTriKhoa  %>'>
+                    <img src="images/DownloadBaoGia.gif" alt="Download bao giao thue giao va cop pha" /></a>
+            </div>
+            <div class="smallbox">
+                <div class="smallbox_dau">
+                    <span>SẢN PHẨM NỔI BẬT</span></div>
+                <div class="smallbox_than">
+                    <adsoftware:SanPhamNoiBat ID="SanPhamNoiBat" runat="server" />
+                </div>
+                <div class="smallbox_chan">
+                </div>
+            </div>
+            <div class="smallbox">
+                <div class="smallbox_dau">
+                    <span>THÔNG TIN TỶ GIÁ</span></div>
+                <div class="smallbox_than">
+                    <div style="margin: 0px 5px;">
+                        <adsoftware:TyGia ID="TyGia" runat="server" />
+                    </div>
+                    <div class="clear">
+                    </div>
+                </div>
+                <div class="smallbox_chan">
+                </div>
+            </div>
+            <div class="smallbox">
+                <div class="smallbox_dau">
+                    <span>THÔNG TIN THỜI TIẾT</span></div>
+                <div class="smallbox_than">
+                    <div style="width: 208px; padding: 5px;">
+                        <div style="margin: 5px;">
+                            <adsoftware:ThoiTiet ID="ThoiTiet" runat="server" />
+                        </div>
+                    </div>
+                </div>
+                <div class="smallbox_chan">
+                </div>
+            </div>
+        </div>
+        <div id="cottrai">
+            <adsoftware:NhomVaLoaiSanPham ID="NhomVaLoaiSanPham" runat="server" />
+            <div class="smallbox">
+                <div class="smallbox_dau">
+                    <span>TIN TỨC</span></div>
+                <div class="smallbox_than">
+                    <adsoftware:TinTuc ID="TinTuc" runat="server" />
+                </div>
+                <div class="smallbox_chan">
+                </div>
+            </div>
+            <div class="smallbox">
+                <div class="smallbox_dau">
+                    <span>ĐỐI TÁC CỦA CHÚNG TÔI</span></div>
+                <div class="smallbox_than">
+                    <adsoftware:DoiTac ID="DoiTac" runat="server" />
+                </div>
+                <div class="smallbox_chan">
+                </div>
+            </div>
+        </div>
+        
+        <div id="cotgiua">
+            <asp:ContentPlaceHolder ID="noidung_chinh" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <div id="chantrang">
+        <div id="chanphai">
+            <a href="default.html">Trang chủ</a>&nbsp;|&nbsp;<a href="gioithieu.html">Giới thiệu</a>&nbsp;|&nbsp;<a
+                href="sanpham.html">Sản phẩm</a>&nbsp;|&nbsp;<a href="tintuc.html">Tin tức</a>&nbsp;|&nbsp;<a
+                    href="bando.html">Bản đồ</a>&nbsp;|&nbsp;<a href="lienhe.html">Liên hệ</a>&nbsp;
+            <br />
+            Số lượt truy cập:
+            <%# Application["TatCa"] %>
+            <br />
+            Phát triển bởi <a href="http://caydenthan.com">CayDenThan</a>
+        </div>
+        <div id="chantrai">
+            <adsoftware:CuoiTrang ID="CuoiTrang" runat="server" />
+        </div>
+    </div>
+    <div id="bongchantrang">
+    </div>
+    <%--<div id="divAdRight" style="display: none; position: absolute; top: 0px">
+        <table border="0" width="120" cellspacing="0" cellpadding="0">
+            <tr>
+                <td>
+                    <a href='noithatotoquocte.com' target='_blank'>
+                        <img src='images/right1.jpg' width='120'></a><div style="position: fixed; right: 0;
+                            top: -100%;">
+                            <a href="http://adsoftware.vn">Thi&#7871;t k&#7871; website chuy&#234;n nghi&#7879;p</a></div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div id="divAdLeft" style="display: none; position: absolute; top: 0px">
+        <table border="0" width="120" cellspacing="0" cellpadding="0">
+            <tr>
+                <td>
+                    <a href='http://noithatotoquocte.com' target='_blank'>
+                        <img src='images/left1.jpg' width='120'></a><div style="position: fixed; right: 0;
+                            top: -100%;">
+                            <a href="http://adsoftware.vn">Thi&#7871;t k&#7871; website chuy&#234;n nghi&#7879;p</a></div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+
+    function FloatTopDiv()
+    {
+        startLX = ((document.body.clientWidth -MainContentW)/2)-LeftBannerW-LeftAdjust , startLY = TopAdjust+80;
+        startRX = ((document.body.clientWidth -MainContentW)/2)+MainContentW+RightAdjust , startRY = TopAdjust+80;
+        var d = document;
+        function ml(id)
+        {
+            var el=d.getElementById?d.getElementById(id):d.all?d.all[id]:d.layers[id];
+            el.sP=function(x,y){this.style.left=x + 'px';this.style.top=y + 'px';};
+            el.x = startRX;
+            el.y = startRY;
+            return el;
+        }
+        function m2(id)
+        {
+            var e2=d.getElementById?d.getElementById(id):d.all?d.all[id]:d.layers[id];
+            e2.sP=function(x,y){this.style.left=x + 'px';this.style.top=y + 'px';};
+            e2.x = startLX;
+            e2.y = startLY;
+            return e2;
+        }
+        window.stayTopLeft=function()
+        {
+            if (document.documentElement && document.documentElement.scrollTop)
+                var pY =  document.documentElement.scrollTop;
+            else if (document.body)
+                var pY =  document.body.scrollTop;
+            if (document.body.scrollTop > 30){startLY = 3;startRY = 3;} else {startLY = TopAdjust;startRY = TopAdjust;};
+            ftlObj.y += (pY+startRY-ftlObj.y)/16;
+            ftlObj.sP(ftlObj.x, ftlObj.y);
+            ftlObj2.y += (pY+startLY-ftlObj2.y)/16;
+            ftlObj2.sP(ftlObj2.x, ftlObj2.y);
+            setTimeout("stayTopLeft()", 1);
+        }
+        ftlObj = ml("divAdRight");
+        //stayTopLeft();
+        ftlObj2 = m2("divAdLeft");
+        stayTopLeft();
+    }
+    function ShowAdDiv()
+    {
+        var objAdDivRight = document.getElementById("divAdRight");
+        var objAdDivLeft = document.getElementById("divAdLeft");        
+        
+        if (document.body.clientWidth < 1004)
+        {
+            objAdDivRight.style.display = "none";
+            objAdDivLeft.style.display = "none";
+        }
+        else
+        {
+            objAdDivRight.style.display = "block";
+            objAdDivLeft.style.display = "block";
+            FloatTopDiv();
+        }
+    }  
+	
+    </script>
+
+    <script type="text/javascript">
+        document.write("<script type='text/javascript' language='javascript'>MainContentW = 1004;LeftBannerW = 120;RightBannerW = 120;LeftAdjust = 0;RightAdjust = 0;TopAdjust = 0;ShowAdDiv();window.onresize=ShowAdDiv;;<\/script>");
+    </script>--%>
+    </form>
+</body>
+</html>

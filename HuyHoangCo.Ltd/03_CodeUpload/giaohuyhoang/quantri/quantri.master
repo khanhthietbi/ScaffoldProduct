@@ -1,0 +1,171 @@
+﻿<%@ master language="C#" autoeventwireup="true" inherits="quantri_quantri, App_Web_kqo0jtkc" %>
+
+<%@ Register Src="~/usercontrols/TrangDong_Link.ascx" TagName="TrangDong_Link" TagPrefix="adsoftware" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Quan tri website</title>
+
+    <script src="../js/CurrentDate.js" type="text/javascript"></script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="toan_trang">
+        <div id="dau_trang">
+            <div style="height: 20px; width: 100%">
+                <div class="lbl_quantritrang">
+                    Quản trị trang web: www.giaohuyhoang.com</div>
+                <div class="lbl_phattrienboi">
+                    Phát triển bởi: <a href="http://caydenthan.com">caydenthan</a> - Hỗ trợ: info.caydenthan.com@gmail.com
+                </div>
+            </div>
+            <div class="lbl_homnayngay">
+                <div style="float: left;">
+                    <span>
+
+                        <script type="text/javascript">document.write(showCurrentDate())</script>
+
+                    </span><span>Khách đang xem:
+                        <%# Application["visitors_online"]%></span> <span>Số lượt truy cập:
+                            <%# Application["TatCa"] %></span>
+                </div>
+                <div class="lbl_dangxuat">
+                    Xin chào <b>quản trị hệ thống</b> |
+                    <asp:LoginStatus ID="LoginStatus1" runat="server" LogoutText="Đăng xuất" />
+                </div>
+            </div>
+            <div class="shortcut">
+                <ul>
+                    <li><a href="../default.aspx" target="_blank">
+                        <img src="../App_Themes/quantri/images/icon_trangchu.png" alt="" height="50px" width="50px"
+                            style="float: left;" />
+                        <p>
+                            Trang chủ</p>
+                    </a></li>
+                    <li><a href="danhsachtintuc.aspx">
+                        <img src="../App_Themes/quantri/images/icon_tintuc.png" alt="" height="50px" width="50px"
+                            style="float: left;" />
+                        <p>
+                            Tin tức</p>
+                    </a></li>
+                    <li><a href="danhsachsanpham.aspx">
+                        <img src="../App_Themes/quantri/images/icon_sanpham.png" alt="" height="50px" width="50px"
+                            style="float: left;" />
+                        <p>
+                            Sản phẩm</p>
+                    </a></li>
+                    <li><a href="lienhe.aspx">
+                        <img src="../App_Themes/quantri/images/icon_email.png" alt="" height="50px" width="50px"
+                            style="float: left;" />
+                        <p>
+                            Liên hệ</p>
+                    </a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="giua_trang">
+            <div style="clear: both;">
+            </div>
+            <div id="cot_trai">
+                <div class="leftbox">
+                    <div class="leftbox_header">
+                        <img alt="" src="../App_Themes/quantri/images/icon_quanlynoidung.png" width="26px"
+                            height="22px" />
+                        <h3>
+                            Thao tác nhanh</h3>
+                    </div>
+                    <div class="leftbox_content">
+                        <ul>
+                            <li><a href="ThemMoiTinTuc.aspx">Thêm tin tức</a></li>
+                            <li><a href="ThemMoiSanPham.aspx">Thêm mới sản phẩm</a></li>
+                        </ul>
+                    </div>
+                    <div class="leftbox_footer">
+                    </div>
+                </div>
+                <div class="leftbox">
+                    <div class="leftbox_header">
+                        <img alt="" src="../App_Themes/quantri/images/icon_quanlynoidung.png" width="26px"
+                            height="22px" />
+                        <h3>
+                            Quản lý tin tức</h3>
+                    </div>
+                    <div class="leftbox_content">
+                        <ul>
+                            <li><a href="DanhSachTinTuc.aspx">Danh sách tin tức</a></li>
+                            <li><a href="ThemMoiTinTuc.aspx">Thêm tin tức</a></li>
+                        </ul>
+                    </div>
+                    <div class="leftbox_footer">
+                    </div>
+                </div>
+                <div class="leftbox">
+                    <div class="leftbox_header">
+                        <img alt="" src="../App_Themes/quantri/images/icon_quanlynoidung.png" width="26px"
+                            height="22px" />
+                        <h3>
+                            Quản lý Sản phẩm</h3>
+                    </div>
+                    <div class="leftbox_content">
+                        <ul>
+                            <li><a href="DanhSachSanPham.aspx">Danh sách sản phẩm</a></li>
+                            <li><a href="SanPhamHot.aspx">Sản phẩm nổi bật</a></li>
+                            <li><a href="SanPhamKhuyenMai.aspx">Sản phẩm khuyến mại</a></li>
+                            <li><a href="ThemMoiSanPham.aspx">Thêm sản phẩm</a></li>
+                        </ul>
+                    </div>
+                    <div class="leftbox_footer">
+                    </div>
+                </div>
+                <div class="leftbox">
+                    <div class="leftbox_header">
+                        <img alt="" src="../App_Themes/quantri/images/icon_quanlynoidung.png" width="26px"
+                            height="22px" />
+                        <h3>
+                            Quản lý phân loại</h3>
+                    </div>
+                    <div class="leftbox_content">
+                        <ul>
+                            <li><a href="NhomLoaiSanPham.aspx">Nhóm loại sản phẩm</a></li>
+                            <li><a href="LoaiSanPham.aspx">Loại sản phẩm</a></li>
+                        </ul>
+                    </div>
+                    <div class="leftbox_footer">
+                    </div>
+                </div>
+                <div class="leftbox">
+                    <div class="leftbox_header">
+                        <img alt="" src="../App_Themes/quantri/images/icon_thongtinchung.png" width="26px"
+                            height="22px" />
+                        <h3>
+                            Thông tin chung</h3>
+                    </div>
+                    <div class="leftbox_content">
+                        <ul>
+                            <adsoftware:TrangDong_Link ID="TrangDong_Link" runat="server" />
+                            <li><a href="Baogiao.aspx">Quản lý báo giá</a></li>
+                            <li><a href="HoTroTrucTuyen.aspx">Khung hỗ trợ trực tuyến</a></li>
+                            <li><a href="DoiTac.aspx">Đối tác của chúng tôi</a></li>
+                            <li><a href="CuoiTrang.aspx">Thông tin chân website</a></li>
+                            <li><a href="LienHe.aspx">Danh sách liên hệ</a></li>
+                            <li><a href="DoiMatKhau.aspx">Đổi mật khẩu</a></li>
+                        </ul>
+                    </div>
+                    <div class="leftbox_footer">
+                    </div>
+                </div>
+            </div>
+            <asp:ContentPlaceHolder ID="NoiDungChinh" runat="server">
+            </asp:ContentPlaceHolder>
+            <div style="clear: both;">
+            </div>
+        </div>
+        <div id="cuoi_trang">
+        </div>
+    </div>
+    </form>
+</body>
+</html>
